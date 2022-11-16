@@ -14,6 +14,7 @@ export class ServerComponent {
   allowButtonClick: boolean = false;
   serverCreationStatus: string = "Server is not Created !!";
   serverName = '';
+  serverCreated = false;
 
   getCurrentDate() {
     return this.currentDateTime;
@@ -24,6 +25,7 @@ export class ServerComponent {
     }, 3000);
   }
   onServerCreation(){
+    this.serverCreated = true;
     this.serverCreationStatus = "Server is Created Successfully.";
   }
   onServerUpdateName(event: Event){

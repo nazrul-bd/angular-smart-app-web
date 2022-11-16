@@ -3,7 +3,10 @@
   ADD SERVER </button>
 
 <input type="text" (input)="onServerUpdateName($event)" class="form-control" placeholder="Event Binding">
-{{serverName}}
+<p *ngIf="serverCreated; else noServer">Server is created server name is {{serverName}}</p>
+<ng-template #noServer>
+  <p>Server was not created!!</p>
+</ng-template>
 <input type="text" [(ngModel)]="serverName" class="form-control" placeholder="Two Way Binding">
 
 <!--<p>{{serverCreationStatus}}</p>-->
