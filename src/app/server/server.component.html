@@ -1,13 +1,12 @@
 
-<button class="btn btn-primary"
-        [disabled]="!allowButtonClick" (click)="onServerCreation()">
-  ADD SERVER
-</button>
+<button class="btn btn-primary" [disabled]="!allowButtonClick" (click)="onServerCreation()">
+  ADD SERVER </button>
 
-<input type="text" (input)="onServerUpdateName($event)" class="form-control">
+<input type="text" (input)="onServerUpdateName($event)" class="form-control" placeholder="Event Binding">
 {{serverName}}
+<input type="text" [(ngModel)]="serverName" class="form-control" placeholder="Two Way Binding">
 
-<p>{{serverCreationStatus}}</p>
-<div>
-  <p>{{'Server'}} {{serverId}} is in {{serverStatus}} {{getCurrentDate()}}</p>
-</div>
+<!--<p>{{serverCreationStatus}}</p>-->
+<!--<div>-->
+<!--  <p>{{'Server'}} {{serverId}} is in {{serverStatus}} {{getCurrentDate()}}</p>-->
+<!--</div>-->
