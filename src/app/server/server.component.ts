@@ -2,7 +2,17 @@ import {Component} from "@angular/core";
 
 
 @Component({
-  selector:'app-server',
-  templateUrl:'./server.component.html'
+  //selector:'app-server',
+  //selector:'app-server',
+  selector: '.app-server',
+  templateUrl: './server.component.html'
 })
-export class ServerComponent{}
+export class ServerComponent {
+  serverId: number = 1001011;
+  serverStatus: string = "offline!!";
+  currentDateTime: Date = new Date();
+
+  getCurrentDate() {
+    return this.currentDateTime;
+  }
+}
