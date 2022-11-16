@@ -1,3 +1,13 @@
+
+<button class="btn btn-primary"
+        [disabled]="!allowButtonClick" (click)="onServerCreation()">
+  ADD SERVER
+</button>
+
+<input type="text" (input)="onServerUpdateName($event)" class="form-control">
+{{serverName}}
+
+<p>{{serverCreationStatus}}</p>
 <div>
   <p>{{'Server'}} {{serverId}} is in {{serverStatus}} {{getCurrentDate()}}</p>
 </div>
