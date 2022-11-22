@@ -5,11 +5,12 @@ import {Component} from "@angular/core";
   //selector:'app-server',
   //selector:'app-server',
   selector: '.app-server',
-  templateUrl: './server.component.html'
+  templateUrl: './server.component.html',
+  styleUrls: ['./server.component.css']
 })
 export class ServerComponent {
   serverId: number = 1001011;
-  serverStatus: string = "offline!!";
+  serverStatus: string = "offline";
   currentDateTime: Date = new Date();
   allowButtonClick: boolean = false;
   serverCreationStatus: string = "Server is not Created !!";
@@ -26,6 +27,7 @@ export class ServerComponent {
     this.randomVal = Math.random().valueOf();
     if (this.randomVal > 0.5){
       this.bgColor = 'orange';
+      this.serverStatus = 'online';
     }
     setTimeout(()=>{
       this.allowButtonClick = true;
