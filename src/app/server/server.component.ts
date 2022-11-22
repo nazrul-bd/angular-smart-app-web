@@ -18,6 +18,7 @@ export class ServerComponent {
   serverCreated = false;
   randomVal = 0;
   bgColor = 'green';
+  servers = ['server1', 'server2', 'server3'];
 
 
   getCurrentDate() {

@@ -11,6 +11,8 @@
 </ng-template>
 <input type="text" [(ngModel)]="serverName" class="form-control" placeholder="Two Way Binding">
 
+<p *ngFor="let serverName of servers"> {{serverName}}</p>
+
 <!--<p>{{serverCreationStatus}}</p>-->
 <!--<div>-->
 <!--  <p>{{'Server'}} {{serverId}} is in {{serverStatus}} {{getCurrentDate()}}</p>-->
