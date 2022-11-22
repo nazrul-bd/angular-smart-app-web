@@ -15,11 +15,18 @@ export class ServerComponent {
   serverCreationStatus: string = "Server is not Created !!";
   serverName = '';
   serverCreated = false;
+  randomVal = 0;
+  bgColor = 'green';
+
 
   getCurrentDate() {
     return this.currentDateTime;
   }
   constructor() {
+    this.randomVal = Math.random().valueOf();
+    if (this.randomVal > 0.5){
+      this.bgColor = 'orange';
+    }
     setTimeout(()=>{
       this.allowButtonClick = true;
     }, 3000);
@@ -32,4 +39,9 @@ export class ServerComponent {
     console.log(event)
     this.serverName = (<HTMLInputElement>event.target).value;
   }
+
+  getBackgroundColor(){
+    return this.bgColor;
+  }
+
 }
