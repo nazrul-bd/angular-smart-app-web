@@ -1,23 +1,17 @@
+<!-- Data Binding Example from https://angular.io/guide/binding-overview -->
+
+<h3>Data Binding Example: Customer Details</h3><hr>
 
 <div class="container">
 
-  <div class="row">
-
-    <div class="col-xs-12">
-<!--      <h1>Hello Bangladesh</h1>-->
-      <h3>
-        <app-servers></app-servers>
-      </h3>
-    </div>
-    <div class="col-xs-12">
-<!--      <h1>Hello Bangladesh</h1>-->
-      <h3>
-        <app-servers></app-servers>
-      </h3>
-    </div>
-
-  </div>
-
+  <ul>
+    <li *ngFor="let cust of customers">
+      <label>Customer Name: {{cust.name}}</label><br>
+      <label>Customer Age: {{cust.age}}</label><br>
+      <label>Customer Address: {{customerAddress}}</label><hr>
+    </li>
+  </ul>
 
 </div>
 
+<h3></h3>
