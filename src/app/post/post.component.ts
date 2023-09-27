@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
+  title:string = "List of Posts >> Data Binding {{String Interpolation}}";
+
   constructor() { }
 
   ngOnInit(): void {
