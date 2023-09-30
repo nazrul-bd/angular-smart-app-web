@@ -8,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class PostComponent implements OnInit {
 
   title: string = "List of Posts >> Data Binding {{String Interpolation}}";
+  messageFromPost: string = 'Message From Parent [POST] component to [POST-LIST]';
   @Input() fromParent: string;
 
   constructor() {
