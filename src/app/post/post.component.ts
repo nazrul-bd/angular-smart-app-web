@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  title:string = "List of Posts >> Data Binding {{String Interpolation}}";
+  title: string = "List of Posts >> Data Binding {{String Interpolation}}";
+  @Input() fromParent: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

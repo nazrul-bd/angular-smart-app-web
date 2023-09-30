@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  parentMessage: string = "Message from parent [APP] component! to Child [POST] component @Input";
 }
