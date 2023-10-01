@@ -20,6 +20,10 @@ export class AppComponent implements AfterViewInit {
     console.log(this.postComponent);
   }
 
+  buttonClicked(){
+    console.log("Button Clicked.")
+  }
+
   receiveMessage($event) {
     this.childMessage = $event;
   }
