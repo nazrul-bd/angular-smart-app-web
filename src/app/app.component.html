@@ -1,5 +1,7 @@
 <h3>App Component</h3>
 <app-navbar></app-navbar>
-<app-post [fromParent]='parentMessage'></app-post>
+<app-post [fromParent]='parentMessage' (fromChildEvent)='receiveMessage($event)'></app-post>
 
 <h5>{{messageFromChildPostCom}}</h5>
+
+<p>{{childMessage}}</p>

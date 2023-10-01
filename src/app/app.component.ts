@@ -10,10 +10,15 @@ export class AppComponent implements AfterViewInit{
   parentMessage: string = "Message from parent [APP] component! to Child [POST] component @Input";
   @ViewChild(PostComponent) postComponent;
   messageFromChildPostCom: string;
+  childMessage:string;
 
   ngAfterViewInit(): void {
     this.messageFromChildPostCom = this.postComponent.messageFromChildPost;
     console.log(this.postComponent);
+  }
+
+  receiveMessage($event){
+    this.childMessage = $event;
   }
 
 

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -9,13 +9,19 @@ export class PostComponent implements OnInit {
 
   title: string = "List of Posts >> Data Binding {{String Interpolation}}";
   messageFromPost: string = 'Message From Parent [POST] component to [POST-LIST]';
-  messageFromChildPost:string = 'Message from Child [POST] to Parent [APP] component.';
+  messageFromChildPost: string = 'Message from Child [POST] to Parent [APP] component.';
+  messageOutputFromChild: string = 'Child Message Output from post using @Output Decorator';
   @Input() fromParent: string;
+  @Output() fromChildEvent:EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {
   }
 
   ngOnInit(): void {
+  }
+
+  sendMessage() {
+    this.fromChildEvent.emit(this.messageOutputFromChild);
   }
 
 }
