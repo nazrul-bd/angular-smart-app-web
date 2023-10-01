@@ -9,6 +9,7 @@ export class PostComponent implements OnInit {
 
   title: string = "List of Posts >> Data Binding {{String Interpolation}}";
   messageFromPost: string = 'Message From Parent [POST] component to [POST-LIST]';
+  messageFromChildPost:string = 'Message from Child [POST] to Parent [APP] component.';
   @Input() fromParent: string;
 
   constructor() {
