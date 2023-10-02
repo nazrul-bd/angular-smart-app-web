@@ -14,7 +14,9 @@
 <button (click)="buttonClicked()">Click Me</button>
 <input (keyup)="onkeyUpEventTest()">
 <input (keyup)="onkeyUpEvent($event)">
-<input (keyup.enter)="onkeyUpEventEnter()">
+<input (keyup.enter)="onkeyUpEventEnter()"><br>
+<input (keyup.enter)="receiveUserName($event)" placeholder="username">
+<input (keyup.enter)="receiveUserName2(username.value)" placeholder="username2" #username>
 <br>
 <br>
 <br>

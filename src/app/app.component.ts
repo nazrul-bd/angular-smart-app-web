@@ -46,5 +46,13 @@ export class AppComponent implements AfterViewInit {
     this.childMessage = $event;
   }
 
+  receiveUserName($event) {
+    console.log($event.target.value);
+  }
+
+  receiveUserName2(username) {
+    console.log("Username 2: "+username);
+  }
+
 
 }
