@@ -12,5 +12,12 @@
 <!--<img [src]='imgUrl2' alt="">-->
 <hr>
 <button (click)="buttonClicked()">Click Me</button>
+<input (keyup)="onkeyUpEventTest()">
+<input (keyup)="onkeyUpEvent($event)">
+<input (keyup.enter)="onkeyUpEventEnter()">
+<br>
+<br>
+<br>
+<br>
 
 
