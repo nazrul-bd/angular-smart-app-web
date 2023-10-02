@@ -15,6 +15,7 @@ export class AppComponent implements AfterViewInit {
   imgUrl2: string = 'https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_1280.jpg';
   change_col: boolean = true;
   count: number = 0;
+  twoWayData: string;
 
   ngAfterViewInit(): void {
     this.messageFromChildPostCom = this.postComponent.messageFromChildPost;
@@ -28,17 +29,18 @@ export class AppComponent implements AfterViewInit {
   onkeyUpEventTest() {
     console.log("On Key Up Event:" + this.count++)
   }
+
   onkeyUpEvent($event) {
     console.log($event);
     console.log($event.keyCode);
-    if ($event.keyCode == 13){
+    if ($event.keyCode == 13) {
       console.log("Enter Pressed");
     }
 
   }
 
   onkeyUpEventEnter() {
-      console.log("keyup.Enter Pressed");
+    console.log("keyup.Enter Pressed");
 
   }
 
@@ -51,7 +53,11 @@ export class AppComponent implements AfterViewInit {
   }
 
   receiveUserName2(username) {
-    console.log("Username 2: "+username);
+    console.log("Username 2: " + username);
+  }
+
+  twoWayDataPass() {
+    console.log("NgModel TwoWay Data Pass: " + this.twoWayData);
   }
 
 

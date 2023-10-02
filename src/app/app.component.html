@@ -16,10 +16,11 @@
 <input (keyup)="onkeyUpEvent($event)">
 <input (keyup.enter)="onkeyUpEventEnter()"><br>
 <input (keyup.enter)="receiveUserName($event)" placeholder="username">
-<input (keyup.enter)="receiveUserName2(username.value)" placeholder="username2" #username>
+<input (keyup.enter)="receiveUserName2(username.value)" placeholder="username2" #username><br>
+<input [(ngModel)]="twoWayData" (keyup.enter)="twoWayDataPass()" placeholder="two way binding">
 <br>
 <br>
 <br>
-<br>
+<hr>
 
 
